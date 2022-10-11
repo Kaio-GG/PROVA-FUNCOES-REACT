@@ -9,9 +9,9 @@ export default function Index() {
 
     function paradas (capacidade , consumo , distancia){
         Number(capacidade,consumo,distancia)
-        let a = (capacidade*consumo)/700
-        Math.ceil(a)
-        setresp(a)
+        let a = distancia/(consumo*capacidade)
+        
+        setresp(Math.ceil(a))
     }
 
     return(
@@ -22,7 +22,7 @@ export default function Index() {
         </div>
         <div>
             <input type='number' placeholder=' digite a capacidade' onChange={e => setcapac(e.target.value)}/>&ensp;
-            <input type='number' placeholder=' digite o consumo' value={diav} onChange={e => setconsumo(e.target.value)}/> &ensp;
+            <input type='number' placeholder=' digite o consumo'  onChange={e => setconsumo(e.target.value)}/> &ensp;
             <input type='number' placeholder=' digite a distancia' onChange={e => setdist(e.target.value)}/>&ensp;
             <button onClick={() => paradas(capac,consumo , dist)}>CALCULAR</button>
         </div>
