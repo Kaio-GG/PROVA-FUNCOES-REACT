@@ -27,7 +27,7 @@ export default function Index() {
 
                 <button onClick={() => calcular(gramas)}>calcular</button>
 
-                <p>{resp}</p>
+                <p>R${resp} Reais</p>
 
             </main>
 
