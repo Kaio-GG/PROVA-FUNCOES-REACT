@@ -5,6 +5,8 @@ import Exer3 from './pages/exercicio3/index.js'
 import Exer4 from './pages/exercicio4/index.js'
 import Exer5 from './pages/exercicio5/index.js'
 import Exer6 from './pages/exercicio6/index.js'
+import Exer7 from './pages/exercicio7/index.js'
+import Exer8 from './pages/exercicio8/index.js'
 
 
 export default function AppRoutes() {
@@ -17,6 +19,8 @@ export default function AppRoutes() {
                 <Route path='/exer4' element={<Exer4/>} />
                 <Route path='/exer5' element={<Exer5/>} />                
                 <Route path='/exer6' element={<Exer6/>} />
+                <Route path='/exer7' element={<Exer7/>} />
+                <Route path='/exer8' element={<Exer8/>} />
             </Routes>
         </BrowserRouter>
     )
