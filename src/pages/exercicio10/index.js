@@ -1,34 +1,35 @@
 import { useState } from 'react'
 import './index.scss'
 
-export default function Index(){    
+export default function Index() {
     const [inicio, setInicio] = useState('');
     const [fim, setFim] = useState('');
+    const [resp, setResp] = useState([]);
 
-    const [resp, setResp] = useState('');
 
-    function contagem(começo, final){
+    function contagem(comeco, final) {
+        let a = resp
 
-        for(começo; começo <= final; começo++){
-            setResp(começo)
+        for (comeco; comeco <= final; comeco++) {
+            a = [...a, comeco];
         }
-
+        return setResp(a);
     }
 
-    return(
+    return (
         <main>
 
             <h1>informe o numero de inicio</h1>
-            <input value={inicio} onChange={e => setInicio(e.target.value)} />
+            <input type='number' value={inicio} onChange={e => setInicio(e.target.value)} />
 
             <h1>informe o numero de fim</h1>
-            <input value={fim} onChange={e => setFim(e.target.value)} />
+            <input type='number' value={fim} onChange={e => setFim(e.target.value)} />
 
             <button onClick={() => contagem(inicio, fim)}>Contar</button>
 
-            {resp}
+            <p>{resp}</p>
 
-            
+
         </main>
     )
 
