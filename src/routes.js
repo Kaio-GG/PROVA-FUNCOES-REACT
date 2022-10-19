@@ -10,7 +10,7 @@ import Exer8 from './pages/exercicio8/index.js'
 import Exer9 from './pages/exercicio9/index.js'
 import Exer10 from './pages/exercicio10/index.js'
 import Exer11 from './pages/exercicio11/index.js'
-
+import Exer12 from './pages/exercicio12/index.js'
 
 
 export default function AppRoutes() {
@@ -28,6 +28,7 @@ export default function AppRoutes() {
                 <Route path='/exer9' element={<Exer9/>} />
                 <Route path='/exer10' element={<Exer10/>} />
                 <Route path='/exer11' element={<Exer11/>} />
+                <Route path='/exer12' element={<Exer12/>} />
             </Routes>
         </BrowserRouter>
     )
